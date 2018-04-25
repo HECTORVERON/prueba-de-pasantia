@@ -1,0 +1,100 @@
+body{font-family: arial;}
+/*el body tiene definido la letra fuente en general arial*/
+.container{
+    /*este es el inicio de navegador vertical*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #333;
+}
+/*en la clase container muestra de que manera va a quedar el navegador vertical */
+.container li a{
+    list-style-type: none;
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+/*los contenido del container se mostrara de forma en bloque */
+.container li a.active{
+    background-color: red;
+    color:white;
+    text-align: center;
+}
+/* la clase active signica que uno de los bloque mantendra su color de fondo */
+.container li a:hover:not(.active){
+    background-color: dimgray;
+    color: white;
+}
+/*con la etiqueta hover al pasar el mause por los bloque se desplegra in color difernte y 
+a la ves denega la clase active para que no sea afectado */
+.subcontainer {
+    position: relative;
+    display: inline-block;
+
+}
+/*subcontainer su posicion es relative puede varia y el diplay  esta en linea pero en bloque*/
+.subcontainer-content{
+    display: none;
+    position: absolute;
+    background-color: #111;
+    min-width: 160px;
+    list-style-type: none;
+
+}
+/*subcontainer se define el fondo se le quita las biñeta y se le asipna una posicion absoluta*/
+.subcontainer-content a{
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+/*aca se leda el color a las letras y que se despliege en bloque  */
+.container li.deple:hover .subcontainer-content {
+    display: block;
+}
+/*en esta parte se selecciona una parte del bloque que se desea que contenga subbloque al pasar 
+el mouse encima  */
+.titulo{
+    list-style-type: none; 
+    background-color: red;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 600px;
+    margin-left: 350px;
+}
+.titulo li{
+    float: left;
+    border-right: 1px solid #bbb;
+}
+.titulo li a{
+    display: block;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: blue;
+}
+.desplegar {
+    position: relative;
+    display: block;
+
+}
+/*subcontainer su posicion es relative puede varia y el diplay  esta en linea pero en bloque*/
+.subdesplegar-content{
+    display: block;
+    position: absolute;
+    background-color: #111;
+    min-width: 160px;
+    list-style-type: none;
+
+}
+/*subcontainer se define el fondo se le quita las biñeta y se le asipna una posicion absoluta*/
+.subdesplegar-content a{
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+/*aca se leda el color a las letras y que se despliege en bloque  */
+.titulo li.deplex:hover .subdesplegar-content {
+    display: block;
+}
