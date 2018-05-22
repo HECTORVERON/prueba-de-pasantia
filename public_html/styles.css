@@ -6,18 +6,20 @@ body{font-family: arial; background-color: wheat}
 /*el body tiene definido la letra fuente en general arial*/
 #vertical{
     display: none;
-    margin: 12px;
+    position: relative;
     padding: 12px;
-   
+    margin: 12px;
+
+
 }
 /*con esto se crea un id para poder ocultar el navegador horizontal y hace que aparezca el vertical*/
 .container{
     /*este es el inicio de navegador vertical*/
-  
+
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
+    width: 150px;
     height: 200px;
     background-color: #333;
 }
@@ -54,7 +56,7 @@ a la ves denega la clase active para que no sea afectado */
     display: none;
     position: absolute;
     background-color: #111;
-    min-width: 200px;
+    min-width: 150px;
     list-style-type: none;
 }
 /*subcontainer se define el fondo se le quita las biñeta y se le asipna una posicion absoluta*/
@@ -76,7 +78,7 @@ el mouse encima  */
     width: 1000px;
     margin: 30px auto;
     background-color: black;
-    
+
 }
 .navegar ul{
     list-style-type: none;
@@ -87,6 +89,7 @@ el mouse encima  */
     position: relative;
     border-right: 1px solid #bbb;
     text-align: center;
+    z-index: 1;
 }
 .titulo > li > a{
 
@@ -94,6 +97,7 @@ el mouse encima  */
     padding: 15px 20px;
     color: white;
     text-decoration:  none;
+
 }
 .titulo >li > a:hover{
     color: buttonface;
@@ -126,48 +130,66 @@ el mouse encima  */
     background-color: black;
     width: 100px;
     text-align: center;
+    width: 150px;
+   
 }
 .prueba1 > li {
     display:block;  
     color: white;
+    margin: 12px;
+    padding: 12px;
+    
+   
 }
 .subprueba {
     position: relative;
     display: inline-block;
-    padding: 20px auto;
-    
+  
+
 }
 #colapsado{
     display: none;
-    margin: 12px;
-    padding: 12px;
+    margin: 10px;
+    padding: 10px;
     height: 300px;
 }
 .subprueba {
     display: none;
     background-color: #111;
     list-style-type: none;
-  
-     
+
 }
-.subprueba a{
+
+.subprueba li a{
     color: white;
     text-decoration: none;
     display: block;
-     
-
 }
-.subprueba .active{
+
+.subprueba li a.active{
     background-color: red;
 }
 .prueba1 li.desplegar:hover .subprueba{
     display: block;
 }
 #contenido{
-position: relative;
-display:block;
+    position: absolute;
    
+
+
 }
+@media only screen and (max-width: 800px) {
+    #contenido {
+        position: absolute;
+        padding-left: 85px;  
+    }
 
-
-
+}
+@media only screen and (max-width: 500px) {
+    body{
+        padding-top:80px;
+    }
+    #contenido{
+        padding-left: 50%;
+    }
+}
