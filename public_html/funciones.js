@@ -16,5 +16,5 @@ function mostrarcolapsado() {
     document.getElementById('vertical').style.display = 'none';
     document.getElementById('horizontal').style.display = 'none';
     document.getElementById('colapsado').style.display = 'block';
-    document.getElementById('contenido').style.margin = '-320px 0px 0px 20%';
+    document.getElementById('contenido').style.margin = '-310px 0px 0px 20%';
 }
